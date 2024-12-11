@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="area">
+        <label>Height</label>
+        <input name="height" value="1">
+        <br>
+        <label>Width</label>
+        <input name="width">
+        <br>
+        <button type="button" onclick="calc()">Submit</button>
+    </form>
+    <form name="calculus">
+        <label>Height</label>
+        <input name="height" value="4">
+        <br>
+        <label>Width</label>
+        <input name="width">
+        <br>
+        <button type="button" onclick="ca()">Submit</button>
+    </form>
+    <p id="ans"></p>
+
+
+    <script>
+var forms = document.area;
+//let x = document.forms["area"]["height"].value;
+console.log(forms.height.value);
+//console.log(x);
+function calc() {
+   var h = forms.height.value;
+   var w = forms.width.value;
+   var a = h * w;
+   var ans = document.getElementById('ans');
+   ans.innerHTML=a;
+
+}
+var forms1 = document.calculus;
+function ca(){
+    var d = forms1.height.value;
+    var g = forms1.width.value;
+    var a = d * g;
+   var ans = document.getElementById('ans');
+   ans.innerHTML=a/2;
+
+}
+
+var str = "   this is a    string   ";
+var trims = str.trim();
+var slices = trims.slice(12,19);
+var substr = trims.substr(13,6)
+var rep  = trims.replace("string", "Object");
+console.log(str.length)
+console.log("Example of a string"+str)
+console.log(`Example of a string ${str}`)
+var num = "10";
+ var u =num.toString();
+console.log(u / 3);
+    </script>
+</body>
+</html>
